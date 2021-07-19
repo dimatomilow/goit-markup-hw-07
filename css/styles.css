@@ -678,18 +678,18 @@ img {
 /* Portfolio
 ========================== */
 
-.filter-list {
+.filter__list {
   display: flex;
   justify-content: center;
   list-style: none;
   margin-bottom: 50px;
 }
 
-.filter-list-item:nth-child(-n + 4) {
+.filter__item:nth-child(-n + 4) {
   margin-right: 8px;
 }
 
-.filter-button {
+.filter__button {
   border: none;
   border-radius: 4px;
   padding: 6px 22px;
@@ -708,8 +708,8 @@ img {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter__button:hover,
+.filter__button:focus {
   background-color: var(--accnt-color);
   color: var(--white-color);
 
@@ -718,11 +718,7 @@ img {
   border-radius: 4px;
 }
 
-.portfolio {
-  padding-bottom: 95px;
-}
-
-.portfolio-list {
+.portfolio__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -730,23 +726,37 @@ img {
   margin-top: -30px;
 }
 
-.portfolio-list > .portfolio-list-item {
+.portfolio__list > .portfolio__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
-.portfolio-link:hover,
-.portfolio-link:focus {
+
+.portfolio__link {
+  display: block;
+  width: 100%;
+
+  text-decoration: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__link:hover,
+.portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-overlay {
+.portfolio__overlay {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.overlay__img {
+  margin: 0;
+}
+
+.overlay__text {
   position: absolute;
   top: 0;
   left: 0;
@@ -769,30 +779,18 @@ img {
   overflow: auto;
 }
 
-.portfolio-link:hover .overlay,
-.portfolio-link:focus .overlay {
+.portfolio__link:hover .overlay__text,
+.portfolio__link:focus .overlay__text {
   transform: translateY(0%);
 }
 
-.portfolio-img {
-  margin: 0;
-}
-.portfolio-link {
-  display: block;
-  width: 100%;
-
-  text-decoration: none;
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-blok {
+.portfolio__blok {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
 
-.portfolio-title {
+.box__title {
   margin: 0;
 
   font-weight: 700;
@@ -802,7 +800,7 @@ img {
   color: var(--title-text-color);
 }
 
-.portfolio-text {
+.box__text {
   margin: 0;
 
   color: var(--text-color);
